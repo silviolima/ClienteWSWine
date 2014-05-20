@@ -108,9 +108,9 @@ public final class Wine implements Serializable {
 
 	@Override
 	public String toString() {
-		return bottleLabel + "\n\nYear=" + vintageYear
+		return bottleLabel.toUpperCase() + "\n\nYear=" + vintageYear
 				+ "\nSize=" + bottleSize + "\nType=" + wineType + "\nGrape=" + grapeType + "\nCountry=" +country + "\nHarmonization=" + 
-				harmonization + "\nAlcohol= + alcoholContent "+"%";
+				"Nada a comentar" + "\nAlcohol=" + alcoholContent +"%";
 	}
 	
 	

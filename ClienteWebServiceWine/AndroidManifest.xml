@@ -31,6 +31,9 @@
         <activity
             android:name=".activity.ShowDialogAsyncTask">
         </activity>
+        <activity
+            android:name=".activity.BuscarVinhosActivity">
+        </activity>
     </application>
 
 </manifest>
