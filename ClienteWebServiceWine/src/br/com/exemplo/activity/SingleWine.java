@@ -5,13 +5,8 @@ import java.util.ArrayList;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 import br.com.exemplo.R;
 import br.com.exemplo.model.Wine;
 
@@ -32,9 +27,11 @@ public class SingleWine extends ListActivity {
 		}
 
 		setListAdapter(new ArrayAdapter<Wine>(this, R.layout.list_single,listaDetails));
-
+		
 		ListView lv = getListView();
 		lv.setTextFilterEnabled(true);
+		
+		
 
 		/*lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,

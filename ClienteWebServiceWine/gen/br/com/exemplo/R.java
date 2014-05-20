@@ -26,6 +26,10 @@ public final class R {
         public static final int btBuscarTodos=0x7f05000f;
         public static final int btn_delete=0x7f05000e;
         public static final int btn_update=0x7f05000d;
+        public static final int buscarTodosBt=0x7f050013;
+        public static final int progress=0x7f050010;
+        public static final int textView1=0x7f050011;
+        public static final int txt_percentage=0x7f050012;
         public static final int update_listar_bt=0x7f050008;
         public static final int update_salvar_bt=0x7f050007;
         public static final int update_view=0x7f050006;
@@ -40,6 +44,7 @@ public final class R {
         public static final int list_single=0x7f030002;
         public static final int listview_row=0x7f030003;
         public static final int main=0x7f030004;
+        public static final int main_teste=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f040001;

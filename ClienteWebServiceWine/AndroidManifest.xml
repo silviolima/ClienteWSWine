@@ -28,6 +28,9 @@
         <activity
             android:name=".activity.Add_Update_Cliente">
         </activity>
+        <activity
+            android:name=".activity.ShowDialogAsyncTask">
+        </activity>
     </application>
 
 </manifest>

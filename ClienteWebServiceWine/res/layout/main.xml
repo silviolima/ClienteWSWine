@@ -11,5 +11,20 @@
         android:layout_height="wrap_content"
         android:text="Buscar Todos"
         tools:ignore="HardcodedText" />
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="34dp" />
 
+    <TextView
+        android:id="@+id/txt_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/progress"
+        android:text="downloading  0%"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 </LinearLayout>
