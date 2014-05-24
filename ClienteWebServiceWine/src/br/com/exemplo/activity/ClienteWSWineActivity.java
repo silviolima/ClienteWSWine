@@ -41,8 +41,22 @@ public class ClienteWSWineActivity extends Activity {
 		});
 	}
 	
+	
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		buscarTodosBt.setEnabled(true);
+		minhaAdegaBt.setEnabled(true);
+		rankingBt.setEnabled(true);
+		
+	}
+
+
+
 	private void gerarToast(CharSequence message) {
-		int duration = Toast.LENGTH_LONG;
+		int duration = Toast.LENGTH_SHORT;
 		Toast toast = Toast
 				.makeText(getApplicationContext(), message, duration);
 		toast.show();

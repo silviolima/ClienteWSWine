@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayout"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/wine"
+        android:id="@+id/wine_single"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -14,17 +15,27 @@
         android:layout_alignWithParentIfMissing="false"
         android:layout_centerHorizontal="false"
         android:layout_margin="20dp"
-        android:textColor="#0000ff"
-        android:text="TextView" />
+        android:text="TextView"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_single"
+        android:layout_below="@+id/wine_single"
+        android:text="Incluir em Minha Adega ?"
+        android:textColor="#FF0000"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/wine"
-        android:layout_below="@+id/wine"
-        android:text="Adicionar "
-        android:textStyle="italic"
-        android:typeface="sans" />
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="14dp"
+        android:text="SIM" />
 
 </RelativeLayout>

@@ -3,14 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_marginTop="10dp"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btBuscarTodos"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acessando servidor"
-        tools:ignore="HardcodedText" />
+        android:layout_gravity="center"
+        android:text="Acessando WebService Remoto"
+        android:textColor="#FF0000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
     <ProgressBar
         android:id="@+id/progress"
         style="?android:attr/progressBarStyleHorizontal"

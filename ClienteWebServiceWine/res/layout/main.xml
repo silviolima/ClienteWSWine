@@ -2,24 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
- 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="Time New Roman"
-        android:text="Bem Vindo !!!"
-        android:textStyle="bold"
-        tools:context=".ClienteWSWineActivity" />
+    android:layout_height="match_parent"
+    android:paddingTop="10dp" >
  
     <Button
         android:id="@+id/btBuscarTodos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:minWidth="120dp"
@@ -54,5 +43,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:src="@drawable/cellar" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Bem Vindo !!!"
+        android:textColor="#FF0000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
  
 </RelativeLayout>

@@ -20,6 +20,7 @@ public class BuscarVinhosActivity extends Activity {
 	Button buscarTodosBt;
 	ProgressBar progressBar;
 	TextView txt_percentage;
+	String error = null;
 	ArrayList<Wine> listaWines = new ArrayList<Wine>();
 
 	/** Called when the activity is first created. */
@@ -44,15 +45,6 @@ public class BuscarVinhosActivity extends Activity {
 	  protected void onPreExecute() {
 	   // update the UI immediately after the task is executed
 	   super.onPreExecute();
-	    WineREST wineREST = new WineREST();
-		try {
-			listaWines = (ArrayList<Wine>) wineREST
-					.getListaWine();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-			gerarToast(e.getMessage());
-		} 
 	 
 	   progress_status = 0;
 	   txt_percentage.setText("carregando 0%");	    
@@ -60,8 +52,20 @@ public class BuscarVinhosActivity extends Activity {
 	      
 	  @Override
 	  protected Void doInBackground(Void... params) {
-	 		  
-	   while(progress_status<100){
+		  
+	   WineREST wineREST = new WineREST();
+			try {
+				listaWines = (ArrayList<Wine>) wineREST
+						.getListaWine();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				error = e.getMessage();
+				System.out.println("Error : "+error);
+			}
+		
+	    
+	   while(progress_status<100 && error == null){
 	     
 	    progress_status += 2;
 	     
@@ -75,15 +79,19 @@ public class BuscarVinhosActivity extends Activity {
 	  @Override
 	  protected void onProgressUpdate(Integer... values) {
 	   super.onProgressUpdate(values);
-	    
+	   
+	   
+	   if( values[0] != 0){ 
 	   progressBar.setProgress(values[0]);
 	   txt_percentage.setText("carregando " +values[0]+"%");
-	    
+	   }
 	  }
 	   
 	  @Override
 	  protected void onPostExecute(Void result) {
 	   super.onPostExecute(result);
+	   
+	   if(error == null){
 	   
 	   Intent i = new Intent(getApplicationContext(),
 				ListaWines.class);
@@ -92,8 +100,11 @@ public class BuscarVinhosActivity extends Activity {
 		startActivity(i);
 	    	     
 	    txt_percentage.setText("Carga completada");
-	    buscarTodosBt.setEnabled(true);
 	    }
+	   else {
+		    gerarToast(error);
+		    txt_percentage.setText("Verifique: rede e resource no servidor");
+	   }
 	 }
 	
 	
@@ -114,4 +125,5 @@ public class BuscarVinhosActivity extends Activity {
 				.makeText(getApplicationContext(), message, duration);
 		toast.show();
 	}
+}
 }

@@ -69,7 +69,7 @@ public class WebServiceCliente {
 		} catch (Exception e) {
 			Log.e("NGVL", "Falha ao acessar Web service", e);
 			result[0] = "0";
-			result[1] = "Falha de rede!";
+			result[1] = "Falha de rede! ";
 		}
 		return result;
 	}

@@ -26,7 +26,9 @@ public class SingleWine extends ListActivity {
 					.getSerializable("lista_details");
 		}
 
-		setListAdapter(new ArrayAdapter<Wine>(this, R.layout.list_single,listaDetails));
+		//setListAdapter(new ArrayAdapter<Wine>(this, R.layout.list_single2,listaDetails));
+		setListAdapter(new ArrayAdapter<Wine>(this, R.layout.list_single2, 
+				   R.id.wine_single, listaDetails));
 		
 		ListView lv = getListView();
 		lv.setTextFilterEnabled(true);

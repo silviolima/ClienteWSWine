@@ -62,11 +62,15 @@ public class WineREST {
 		    	listaCliente.add(gson.fromJson(array.get(i), Wine.class));
 			}
 			return listaCliente;
-		} else {
-			throw new Exception(resposta[1]);
-			
+		} 
+		if(resposta[0].equals("404")){
+			throw new Exception("Verifique Resources no Webservice");
 		}
-	}
+		else {
+		}
+			throw new Exception(resposta[1]);	
+		}
+	
 	
 /*	public String inserirCliente(Cliente cliente) throws Exception {
 		
