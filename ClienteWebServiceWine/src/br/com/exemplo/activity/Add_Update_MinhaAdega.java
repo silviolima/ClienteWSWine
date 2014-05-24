@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import br.com.exemplo.R;
 
-public class Add_Update_Cliente extends Activity {
+public class Add_Update_MinhaAdega extends Activity {
    /* EditText nome_ed, cpf_ed, endereco_ed;
     Button add_salvar_bt, add_listar_bt, update_salvar_bt, update_listar_bt;
     LinearLayout add_view, update_view;
